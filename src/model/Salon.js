@@ -13,8 +13,6 @@ const SalonSchema = new mongo.Schema({
     },{
         timestamps:true
 });
-SalonSchema.pre('save', function(next){
-    return next();
-});
+
 module.exports = mongo.model('Salon', SalonSchema);
 
