@@ -8,9 +8,12 @@ const SalonSchema = new mongo.Schema({
     price:{
         type:Number,
         required:true
-    }    
-
-    },{
+    },
+    schedule:{
+        type:Date,
+        required:true
+    },   
+},{
         timestamps:true
 });
 

@@ -1,13 +1,20 @@
 const express = require('express');
-const mongo = require('mongoose');
+const Sequelize = require('sequelize');
 const body = require('body-parser');
 
 const app = express();
 
-mongo.connect('mongodb+srv://leonardo:2585963741@cluster0-9rqra.mongodb.net/test?retryWrites=true&w=majority',
-{
-    useNewUrlParser: true,
-});
+const sequelize = new Sequelize('hairdress','root','2585963741', {host:'localhost', dialect:'mysql'})
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
+
 app.use(body.json(),require('./routes'));
 
 app.listen(8080);
