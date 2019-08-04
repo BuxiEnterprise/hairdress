@@ -3,8 +3,7 @@ const Salon = require('./controller/SalonController');
 
 const routes = new express.Router();
 
-routes.post('/clients' ,Salon.Store);
-routes.get('/clients', Salon.Index);
-routes.get('/clients/:name',Salon.srcName);
+routes.get('/clients',Salon.index);
+routes.get('/clients/:name');
 
 module.exports = routes;

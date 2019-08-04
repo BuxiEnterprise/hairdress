@@ -4,7 +4,10 @@ const body = require('body-parser');
 
 const app = express();
 
-const sequelize = new Sequelize('hairdress','root','2585963741', {host:'localhost', dialect:'mysql'})
+const sequelize = new Sequelize('hairdress_database_1','postgres','postgres',{
+    host:'localhost',
+    dialect:'postgres'
+})
 
 sequelize
   .authenticate()
@@ -17,4 +20,4 @@ sequelize
 
 app.use(body.json(),require('./routes'));
 
-app.listen(8080);
+app.listen(3636);

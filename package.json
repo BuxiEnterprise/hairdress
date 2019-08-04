@@ -1,5 +1,5 @@
 {
-  "name": "Hairdress",
+  "name": "hairdress",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,11 +8,12 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "docker-compose": "^0.20.2",
     "express": "^4.17.1",
-    "mongoose": "^5.6.6",
-    "mysql2": "^1.6.5",
     "nodemon": "^1.19.1",
+    "pg": "^7.12.0",
     "routes": "^2.1.0",
-    "sequelize": "^5.11.0"
+    "sequelize": "^5.11.0",
+    "yarn": "^1.17.3"
   }
 }
