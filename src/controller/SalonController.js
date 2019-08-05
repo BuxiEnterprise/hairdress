@@ -1,8 +1,7 @@
-const Salon = require('../model/Salon');
+const professional = require('../model/Salon');
 
 module.exports = {
    async index(req,res){
-
-       return res.send('vai toma no cu buceta do caralho') 
-   }
+        console.log(await professional.findAll())
+    }
 };
