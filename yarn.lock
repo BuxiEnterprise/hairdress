@@ -535,11 +535,6 @@ detect-libc@^1.0.2:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
-docker-compose@^0.20.2:
-  version "0.20.2"
-  resolved "https://registry.yarnpkg.com/docker-compose/-/docker-compose-0.20.2.tgz#eaf2aba20c4675b9dd82d55d1ecdee03a8944855"
-  integrity sha512-06e43mThmOfa0i+8E1HsBZUaJll7vX71Sap0ZSC2RXwnC5sUYTRqPJhU8TzLJe5NspbedbVfLcojPiZRFJytdw==
-
 dot-prop@^4.1.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-4.2.0.tgz#1f19e0c2e1aa0e32797c49799f2837ac6af69c57"
@@ -2620,8 +2615,3 @@ yargs@^13.1.0:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^13.1.1"
-
-yarn@^1.17.3:
-  version "1.17.3"
-  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.17.3.tgz#60e0b77d079eb78e753bb616f7592b51b6a9adce"
-  integrity sha512-CgA8o7nRZaQvmeF/WBx2FC7f9W/0X59T2IaLYqgMo6637wfp5mMEsM3YXoJtKUspnpmDJKl/gGFhnqS+sON7hA==
