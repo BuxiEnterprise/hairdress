@@ -6,16 +6,21 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
-        default: Sequelize.UUIDV4,
+        defaultValue: Sequelize.UUIDV4,
       },
       nome: {
-        type: Sequelize.STRING
+        type:Sequelize.STRING(50),
+        allowNull:false      
       },
       cpf: {
-        type: Sequelize.STRING
+        type:Sequelize.STRING(15),
+        allowNull:false,
+        unique:true
       },
       email: {
-        type: Sequelize.STRING
+        type:Sequelize.STRING(50),
+        allowNull:false,
+        unique:true
       },
       createdAt: {
         allowNull: false,

@@ -1,5 +1,26 @@
-const sum = require('.');
+const profissional = require('.');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
+describe('createProfessiona', () => {
+  test('should add professional', async () => {
+    const profissionalMock = {
+      nome: 'Vitinho',
+      email: 'fdsfdsfsdf8787sd@hotmail.com',
+      cpf: '4234234256563'
+    }
+  
+  
+    await expect(profissional.createProfessional(profissionalMock))
+      .resolves.toMatchObject(profissionalMock)
+  })
+
+  test('should not add professional if nome is missing', async () => {
+    const profissionalMock = {
+      email: 'fdsfdsfsdfsd@hotmail.com',
+      cpf: '423423423'
+    }
+  
+  
+    await expect(profissional.createProfessional(profissionalMock))
+      .rejects.toThrowError()
+  });
+})
