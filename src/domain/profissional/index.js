@@ -15,14 +15,6 @@ module.exports = {
             
         }catch(err){
             console.log(err.message)
-        }finally{
-            const professional = await Professional.create({
-                name: 'vitinho',
-                email:'godofredo@gmail',
-                cpf:'4545151515'
-            })
-
-            return professional
         }
     },
     // async findProfessional(dadosDoProfissional){
