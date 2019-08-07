@@ -15,4 +15,4 @@ sequelize
 
 app.use(body.json(),routes);
 
-app.listen(3636);
+app.listen(8080);

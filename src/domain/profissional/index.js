@@ -1,25 +1,24 @@
 const { sequelize } = require('../../models')
-const Professional = sequelize.model('professional')
+const Professional = sequelize.model('professionals')
+const Sequelize = require('sequelize')
+const op = Sequelize.Op
 module.exports = {
     async createProfessional(dadosDoProfissional){
+
         try{
-            const professional = await Professional.findOne(dadosDoProfissional)
-            if(professional.email) throw "email ja existe";
-            if(professional.cpf) throw "cpf ja existe";
+            let professional = await Professional.findOne({
+                [op.or]:[{cpf:dadosDoProfissional.cpf},{email:dadosDoProfissional.email}]
+            })
             if(!professional){
-                professional = await Professional.create(dadosDoProfissional)
-                console,log("aqui executo")
-                return professional
+                throw new Error("Usuario existente")
+                
             }
-            return professional;
-            
+            professional = await Professional.create(dadosDoProfissional)
+            return professional
         }catch(err){
-            console.log(err.message)
-        }
-    },
-    // async findProfessional(dadosDoProfissional){
-    //     const professional = await Professional.findOne(dadosDoProfissional)
-    //     // console.log('cpf',cpf,"email",email,'datauser', professional)
-    //     return professional
-    // }
+            err.mesage
+            return dadosDoProfissional 
+        }    
+        
+    }
 }

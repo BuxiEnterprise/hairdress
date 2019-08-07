@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const professional = sequelize.define('professional', {
+  const professional = sequelize.define('professionals', {
     id: {
       allowNull: false,
       primaryKey: true,

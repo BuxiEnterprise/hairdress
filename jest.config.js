@@ -2,5 +2,5 @@
 module.exports = {
     verbose: true,
     globalSetup: './test/setup',
-    globalTeardown: './test/teardown.js'
+    globalTeardown: './test/teardown'
 };
